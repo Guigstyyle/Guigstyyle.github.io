@@ -1,0 +1,260 @@
+html, body {
+  color : #aa4444 ;
+  background-color: seashell;
+}
+#logo{
+  padding-left: 1%;
+  width: 40px;
+  height: 40px;
+}
+a{
+  color: #FFADBC;
+}
+a:hover {
+  color: #d5b3bf;
+}
+.grosTexte {
+  margin: 2%;
+  padding: 1%;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #ff5a94;
+  border-radius:15px ;
+  color: #610a5f;
+  background-color: RGBa(200,200,200,0.1);
+}
+#musisite {
+  font-size: 50px;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 98vh;
+}
+#contenu{
+  flex-grow: 1;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width: 75%;
+}
+nav {
+  width: 100%;
+  background-color: #FFC3C3;
+  border-radius : 25px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding:0;
+}
+
+nav ul li{
+  flex: 1 1 auto;
+  text-align: center;
+  position: relative;
+}
+
+nav a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+
+nav a:hover{
+  color: orange;
+}
+.sousMenu{
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+  max-height: 0;
+  box-shadow: 0px 1px 2px #fce94f;
+  background-color: #FF5D5D;
+  position: absolute;
+  border-radius : 25px;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav > ul li:hover .sousMenu{
+  animation-name: menu;
+  animation-duration: 0.3s;
+  max-height: 30rem;
+}
+@keyframes menu{
+  from{max-height:0;}
+  to{max-height: 30rem;}
+}
+.sousMenu li{
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.sousMenu a{
+  padding: 10px;
+  border-bottom: none;
+}
+.sousMenu a:hover{
+  border-bottom: none;
+  background-color: RGBa(200,200,200,0.2);
+  animation-name: sousMenu;
+  animation-duration: 0.3s;
+}
+@keyframes sousMenu{
+  from{background-color: RGBa(200,200,200,0);
+      color : ghostwhite;}
+  to{background-color: RGBa(200,200,200,0.2);
+    color: orange;}
+}
+.menuDeroulant > a::after{
+  content:" ▼";
+  font-size: 12px;
+}
+
+#Notable_artists + ul{
+  list-style: none;
+}
+.video{
+  border-color: #ff5a94;
+  border-width: 0.1rem;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  border-radius : 25px;
+}
+footer{
+  padding-top: 1rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+#contact{
+  display: flex;
+  justify-content: center;
+  background-color: RGBa(0,0,0,0.1);
+  text-align: center;
+  border-color: #d1abf3;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-radius : 5px;
+}
+#btn {
+  display:none;
+}
+#submit{
+  background-color: RGBa(0,0,0,0.1) ;
+  color: ghostwhite;
+}
+@keyframes submit{
+  from{background-color:RGBa(0,0,0,0.1);
+       color: ghostwhite;}
+  to{background-color:RGBa(54, 107, 150,0.2);
+    color: white;}
+}
+#submit:hover{
+  background-color: RGBa(54, 107, 150,0.2);
+  animation-name: submit;
+  animation-duration: 0.3s;
+}
+#btn:checked + #contact{
+  border-bottom-color: RGBa(209,171,243,0.3);
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 0px;
+  border-top-left-radius : 25px;
+  border-top-right-radius : 25px;
+  
+}
+#btn:checked + label + form{  
+  border-width: 0.1rem;
+  animation-name: contact;
+  animation-duration: 2s;
+  max-height: 10rem;
+  background-color: RGBa(0,0,0,0.2)
+}
+form{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  
+  max-height: 0;
+  overflow: hidden;
+
+  border-width: 0px;
+  border-style: solid;
+  border-top-style: none;
+  border-color: #d1abf3;
+  border-bottom-left-radius : 25px;
+  border-bottom-right-radius : 25px;
+
+}
+@keyframes contact{
+  from{max-height: 0;}
+  to{max-height: 10rem;
+    background-color: RGBa(0,0,0,0.2);}
+}
+
+.label_et_zone, textarea{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin : 1%;
+}
+input,textarea{
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #ff5a94;
+  border-radius : 8px;
+  color: ghostwhite;
+}
+div input, textarea{
+  background-color: RGBa(0,0,0,0.1);
+}
+#to_the_top{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  position: fixed;
+  font-size: 100%;
+  bottom: 30px;
+  right: 30px;
+  color: lightgray;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: #ff5a94;
+  border-radius : 8px;
+  background-color: RGBa(200,200,200,0.1);
+}
+#to_the_top:hover{
+  animation-name: to_the_top;
+  animation-duration: 0.5s;
+  color: darkgray;
+  background-color:RGBa(0,0,0,0.2) ;
+}
+@keyframes to_the_top{
+  from{color:lightgray;
+      background-color: RGBa(200,200,200,0.1);}
+  to{color: darkgray;
+    background-color: RGBa(0,0,0,0.2);}
+}
+#switch{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  position: fixed;
+  font-size: 100%;
+  bottom: 30px;
+  left: 30px;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: cyan;
+  background-color: gray;
+}
+

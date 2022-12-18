@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta
+    descrption="Musisite is a place where you can learn about electronic music. Electronic music is a large area that includes a lot of subgenre. They have in common that the process of creation implies electronic instruments.">
+  <title>Musisite</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+      
+  <script>
+    function toggleTheme() {
+      // Obtains an array of all <link>
+      // elements.
+      // Select your element using indexing.
+      var theme = document.getElementsByTagName('link')[0];
+
+      // Change the value of href attribute 
+      // to change the css sheet.
+      if (theme.getAttribute('href') == 'style.css') {
+        theme.setAttribute('href', 'style2.css');
+      } else {
+        theme.setAttribute('href', 'style.css');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav>
+    <ul class="menu">
+      <img id="logo" src=logo.png alt="Logo du site">
+      <li class="menuDeroulant">
+        <a href="Drum-n-bass.html">Drum n Bass</a>
+        <ul class="sousMenu">
+          <a href="Drum-n-bass.html#Description">Description</a>
+          <a href="Drum-n-bass.html#History">History</a>
+          <a href="Drum-n-bass.html#Notable_artists">Notable artists</a>
+        </ul>
+      </li>
+      <li class="menuDeroulant">
+        <a href="Dubstep.html">Dubstep</a>
+        <ul class="sousMenu">
+          <a href="Dubstep.html#Description">Description</a>
+          <a href=Dubstep.html#History>History</a>
+          <a href="Dubstep.html#Notable_artists">Notable artists</a>
+        </ul>
+      </li>
+      <li class="menuDeroulant">
+        <a href="Eurobeat.html">Eurobeat</a>
+        <ul class="sousMenu">
+          <a href="Eurobeat.html#Description">Description</a>
+          <a href=Eurobeat.html#History>History</a>
+          <a href="Eurobeat.html#Notable_artists">Notable artists</a>
+        </ul>
+      </li>
+      <li class="menuDeroulant">
+        <a href="Glitch-Hop.html">Glitch-Hop</a>
+        <ul class="sousMenu">
+          <a href="Glitch-Hop.html#Description">Description</a>
+          <a href=Glitch-Hop.html#History>History</a>
+          <a href="Glitch-Hop.html#Notable_artists">Notable artists</a>
+        </ul>
+      </li>
+      <li class="menuDeroulant">
+        <a href="house.html">House</a>
+        <ul class="sousMenu">
+          <a href="house.html#Description">Description</a>
+          <a href=house.html#History>History</a>
+          <a href="house.html#Notable_artists">Notable artists</a>
+          <a href="house.html#Jackin_House">Jackin House</a>
+          <a href="house.html#French_House">French House</a>
+          <a href="house.html#Future_House">Future House</a>
+          <a href="house.html#Tropical_House">Tropical House</a>
+        </ul>
+      </li>
+      <li class="menuDeroulant">
+        <a href="SynthWave.html">SynthWave</a>
+        <ul class="sousMenu">
+          <a href="SynthWave.html#Description">Description</a>
+          <a href="SynthWave.html#History">History</a>
+          <a href="SynthWave.html#Notable_artists">Notable artists</a>
+          <a href="SynthWave.html#Darksynth">Darksynth</a>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <section id="contenu">
+    <h1><a href="index.html">Musisite</a></h1>
+    <h2>A site for Electro music lovers</h2>
+
+    <p class="grosTexte">Electronic music is a large area that includes a lot of subgenre. They have in common that the
+      process of creation
+      implies electronic instruments.</p>
+    <img src="logo.png" alt="Logo du site">
+    <script src="script.js"></script>
+  </section>
+  <footer>
+    <button id="switch" onclick="toggleTheme()"></button>
+    <input type="checkbox" id="btn" />
+    <label id="contact" for="btn">Contact us</label>
+    <form action="mailto:lorys.ramilson@etu.univ-amu.fr" method="post">
+      <div class="label_et_zone">
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="user_name" />
+      </div>
+      <div class="label_et_zone">
+        <label for="mail">E-mail :</label>
+        <input type="email" id="mail" name="user_email" />
+      </div>
+      <div class="label_et_zone">
+        <label for="msg">Message :</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+      <div class="label_et_zone">
+        <label for="submit">(Open message app)</label>
+        <input id="submit" type="submit" value="Send">
+      </div>
+    </form>
+  </footer>
+</body>
+
+</html>
